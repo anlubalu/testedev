@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #fff">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap w/ Vite</title>
+
+    <script src="./js/color-modes.js"></script>
+
+    <link rel="stylesheet" href="./scss/styles.scss" />
+    <script type="module" src="./js/main.js"></script>
+
+    <style>
+      body {
+        padding-bottom: 20px;
+      }
+
+      .navbar {
+        margin-bottom: 20px;
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    <link href="css/navbars.css" rel="stylesheet" />
+  </head>
+
+  <body class="p-0">
+    <div class="container-fluid video-bg p-5 p-md-5 pt-lg-0 pt-xxl-0">
+      <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block">
+        <nav
+          class="navbar navbar-expand p-0 m-0"
+          aria-label="Eighth navbar example"
+        >
+          <div class="container d-flex pt-5" style="border-top: 5px solid #fff">
+            <div class="me-auto">
+              <a class="navbar-brand" href="#"
+                ><img src="/assets/logo.svg" alt="ezoom"
+              /></a>
+            </div>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item me-5">
+                <a class="nav-link" href="#">menu1</a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link" href="#">menu2</a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link" href="#">menu3</a>
+              </li>
+            </ul>
+            <ul class="d-flex list-inline">
+              <li class="me-4"><img src="/assets/search.svg" alt="" /></li>
+              <li class=""><img src="/assets/facebook.svg" alt="" /></li>
+              <li class="ms-3"><img src="/assets/instagram.svg" alt="" /></li>
+              <li class="ms-3"><img src="/assets/youtube.svg" alt="" /></li>
+              <li class="ms-3"><img src="/assets/tiktok.svg" alt="" /></li>
+              <li class="ms-3"><img src="/assets/mic.svg" alt="" /></li>
+              <li class="ms-3"><img src="/assets/linkdin.svg" alt="" /></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="d-block d-sm-block d-md-block d-lg-block d-xl-none">
+        <nav class="navbar" aria-label="Eighth navbar example">
+          <div class="container">
+            <a class="navbar-brand me-auto" href="#"
+              ><img src="/assets/logo.svg" alt="ezoom"
+            /></a>
+            <img src="/assets/search2.svg" alt="" class="me-4" />
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarsExample07"
+              aria-controls="navbarsExample07"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">menu1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">menu2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">menu3</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div
+        class="container d-flex flex-column flex-sm-column flex-md-column flex-lg-column flex-xl-row justify-content-center justify-content-lg-center justify-content-xl-between align-items-center align-items-lg-start align-items-xl-end"
+      >
+        <div>
+          <h1 class="mt-6">
+            Novas<br /><span>modalidades</span><br />e ampliação<br />de
+            <span>horários</span>.
+          </h1>
+          <h2 class="mt-5">Aulas de 45 minutos e período de teste gratuito.</h2>
+          <button class="saiba-mais mt-5">saiba mais</button>
+        </div>
+        <div
+          class="mt-5 mt-lg-5 mt-xl-0 w-100 d-flex flex-column flex-sm-column flex-md-column flex-lg-column flex-xl-row justify-content-lg-center justify-content-xl-end align-items-end align-items-lg-end align-items-xl-center"
+        >
+          <img src="/assets/whatsapp.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="d-block d-sm-block d-md-block d-lg-block d-xl-none container-fluid p-0 destaque"
+    >
+      <div class="carousel slide" id="destaqueSlide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#destaqueSlide"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#destaqueSlide"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#destaqueSlide"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#destaqueSlide"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#destaqueSlide"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div
+            class="carousel-item active"
+            style="
+              border-top: 8px solid #42b073;
+              background-image: url(/assets/c1.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <div class="card d-flex flex-row">
+              <div class="card-body p-5 d-flex flex-column justify-content-end">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item"
+            style="
+              border-top: 8px solid #24beff;
+              background-image: url(/assets/c2.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <div class="card d-flex flex-row">
+              <div class="card-body p-5 d-flex flex-column justify-content-end">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item"
+            style="
+              border-top: 8px solid #42b073;
+              background-image: url(/assets/c3.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <div class="card d-flex flex-row">
+              <div class="card-body p-5 d-flex flex-column justify-content-end">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item"
+            style="
+              border-top: 8px solid #ff632d;
+              background-image: url(/assets/c4.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <div class="card d-flex flex-row">
+              <div class="card-body p-5 d-flex flex-column justify-content-end">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item"
+            style="
+              border-top: 8px solid #ffd400;
+              background-image: url(/assets/c5.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <div class="card d-flex flex-row">
+              <div class="card-body p-5 d-flex flex-column justify-content-end">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="d-none d-sm-none d-md-none d-lg-none d-xl-block container-fluid p-0 destaque"
+    >
+      <div class="card-group">
+        <div
+          class="card"
+          style="
+            border-top: 8px solid #42b073;
+            background-image: url(/assets/c1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="card-body p-5 d-flex flex-column justify-content-end">
+            <h5 class="card-title">
+              Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+            </h5>
+            <p class="card-text pt-4 d-flex">
+              <small class="text-body-secondary me-auto"
+                >10 de Abril 2023</small
+              >
+              <img src="/assets/seta.svg" alt="" />
+            </p>
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            border-top: 8px solid #24beff;
+            background-image: url(/assets/c2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="card-body p-5 d-flex flex-column justify-content-end">
+            <h5 class="card-title">
+              Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+            </h5>
+            <p class="card-text pt-4 d-flex">
+              <small class="text-body-secondary me-auto"
+                >10 de Abril 2023</small
+              >
+              <img src="/assets/seta.svg" alt="" />
+            </p>
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            border-top: 8px solid #42b073;
+            background-image: url(/assets/c3.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="card-body p-5 d-flex flex-column justify-content-end">
+            <h5 class="card-title">
+              Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+            </h5>
+            <p class="card-text pt-4 d-flex">
+              <small class="text-body-secondary me-auto"
+                >10 de Abril 2023</small
+              >
+              <img src="/assets/seta.svg" alt="" />
+            </p>
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            border-top: 8px solid #ff632d;
+            background-image: url(/assets/c4.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="card-body p-5 d-flex flex-column justify-content-end">
+            <h5 class="card-title">
+              Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+            </h5>
+            <p class="card-text pt-4 d-flex">
+              <small class="text-body-secondary me-auto"
+                >10 de Abril 2023</small
+              >
+              <img src="/assets/seta.svg" alt="" />
+            </p>
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            border-top: 8px solid #ffd400;
+            background-image: url(/assets/c5.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="card-body p-5 d-flex flex-column justify-content-end">
+            <h5 class="card-title">
+              Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+            </h5>
+            <p class="card-text pt-4 d-flex">
+              <small class="text-body-secondary me-auto"
+                >10 de Abril 2023</small
+              >
+              <img src="/assets/seta.svg" alt="" />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="blog esportes container mt-5 d-flex flex-column flex-sm-column flex-md-column flex-lg-column flex-xl-row"
+    >
+      <div class="ps-xl-5 ps-xxl-5">
+        <h2 class="mt-6">esportes</h2>
+        <p class="mt-5 d-none d-sm-none d-md-none d-lg-none d-xl-block info">
+          Lorem Ipsum dolor Sit Amet Lorem.
+        </p>
+        <button
+          class="saiba-mais mt-5 d-none d-sm-none d-md-none d-lg-none d-xl-block"
+        >
+          ver todos
+        </button>
+      </div>
+
+      <div
+        class="carousel esportes slide d-block d-sm-block d-md-block d-lg-block d-xl-none"
+        id="esportesSlide"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#esporteSlide"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#esporteSlide"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#esporteSlide"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #42b073;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/e1.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #42b073;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/e2.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #42b073;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/e3.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="d-none d-sm-none d-md-none d-lg-none d-xl-block ms-xl-5 ms-d-xxl-8 mt-5"
+      >
+        <div
+          class="d-flex flex-column flex-sm-column flex-md-column flex-lg-row flex-xl-row column-gap-5 card-group"
+        >
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #42b073;
+                border-radius: 8px;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/e1.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text"></p>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #42b073;
+                border-radius: 8px;
+                overflow-y: hidden;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/e2.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #42b073;
+                border-radius: 8px;
+                overflow-y: hidden;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/e3.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="blog eventos container mt-5 d-flex flex-column flex-sm-column flex-md-column flex-lg-column flex-xl-row"
+    >
+      <div class="ps-xl-5 ps-xxl-5">
+        <h2 class="mt-6">eventos</h2>
+        <p class="mt-5 d-none d-sm-none d-md-none d-lg-none d-xl-block info">
+          Lorem Ipsum dolor Sit Amet Lorem.
+        </p>
+        <button
+          class="saiba-mais mt-5 d-none d-sm-none d-md-none d-lg-none d-xl-block"
+        >
+          ver todos
+        </button>
+      </div>
+
+      <div
+        class="carousel slide d-block d-sm-block d-md-block d-lg-block d-xl-none"
+        id="eventosSlide"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#eventosSlide"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#eventosSlide"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#eventosSlide"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #9b836b;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/ev1.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #9b836b;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/ev2.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #9b836b;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/ev3.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="d-none d-sm-none d-md-none d-lg-none d-xl-block ms-xl-5 ms-d-xxl-8 mt-5"
+      >
+        <div
+          class="d-flex flex-column flex-sm-column flex-md-column flex-lg-row flex-xl-row column-gap-5 card-group"
+        >
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #9b836b;
+                border-radius: 8px;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/ev1.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text"></p>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #9b836b;
+                border-radius: 8px;
+                overflow-y: hidden;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/ev2.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #9b836b;
+                border-radius: 8px;
+                overflow-y: hidden;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/ev3.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="blog servicos container mt-5 d-flex flex-column flex-sm-column flex-md-column flex-lg-column flex-xl-row"
+    >
+      <div class="ps-xl-5 ps-xxl-5">
+        <h2 class="mt-6">serviços</h2>
+        <p class="mt-5 d-none d-sm-none d-md-none d-lg-none d-xl-block info">
+          Lorem Ipsum dolor Sit Amet Lorem.
+        </p>
+        <button
+          class="saiba-mais mt-5 d-none d-sm-none d-md-none d-lg-none d-xl-block"
+        >
+          ver todos
+        </button>
+      </div>
+
+      <div
+        class="carousel slide d-block d-sm-block d-md-block d-lg-block d-xl-none"
+        id="servicosSlide"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#servicosSlide"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#servicosSlide"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#servicosSlide"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #24beff;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/s1.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #24beff;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/s2.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #24beff;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/s3.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="d-none d-sm-none d-md-none d-lg-none d-xl-block ms-xl-5 ms-d-xxl-8 mt-5"
+      >
+        <div
+          class="d-flex flex-column flex-sm-column flex-md-column flex-lg-row flex-xl-row column-gap-5 card-group"
+        >
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #24beff;
+                border-radius: 8px;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/s1.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text"></p>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #24beff;
+                border-radius: 8px;
+                overflow-y: hidden;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/s2.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #24beff;
+                border-radius: 8px;
+                overflow-y: hidden;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/s3.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="blog projetos container mt-5 d-flex flex-column flex-sm-column flex-md-column flex-lg-column flex-xl-row"
+    >
+      <div class="ps-xl-5 ps-xxl-5">
+        <h2 class="mt-6">projetos</h2>
+        <p class="mt-5 d-none d-sm-none d-md-none d-lg-none d-xl-block info">
+          Lorem Ipsum dolor Sit Amet Lorem.
+        </p>
+        <button
+          class="saiba-mais mt-5 d-none d-sm-none d-md-none d-lg-none d-xl-block"
+        >
+          ver todos
+        </button>
+      </div>
+
+      <div
+        class="carousel slide d-block d-sm-block d-md-block d-lg-block d-xl-none"
+        id="projetosSlide"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#projetosSlide"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#projetosSlide"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#projetosSlide"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #ff632d;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/p1.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #ff632d;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/p2.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #ff632d;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/p3.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="d-none d-sm-none d-md-none d-lg-none d-xl-block ms-xl-5 ms-d-xxl-8 mt-5"
+      >
+        <div
+          class="d-flex flex-column flex-sm-column flex-md-column flex-lg-row flex-xl-row column-gap-5 card-group"
+        >
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #ff632d;
+                border-radius: 8px;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/p1.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text"></p>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #ff632d;
+                border-radius: 8px;
+                overflow-y: hidden;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/p2.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #ff632d;
+                border-radius: 8px;
+                overflow-y: hidden;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/p3.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="blog negocios negocios container mt-5 d-flex flex-column flex-sm-column flex-md-column flex-lg-column flex-xl-row"
+    >
+      <div class="ps-xl-5 ps-xxl-5">
+        <h2 class="mt-6">negócios</h2>
+        <p class="mt-5 d-none d-sm-none d-md-none d-lg-none d-xl-block info">
+          Lorem Ipsum dolor Sit Amet Lorem.
+        </p>
+        <button
+          class="saiba-mais mt-5 d-none d-sm-none d-md-none d-lg-none d-xl-block"
+        >
+          ver todos
+        </button>
+      </div>
+
+      <div
+        class="carousel slide d-block d-sm-block d-md-block d-lg-block d-xl-none"
+        id="negociosSlide"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#negociosSlide"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#negociosSlide"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#negociosSlide"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #ffd400;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/n1.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #ffd400;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/n2.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card p-5">
+              <div
+                style="
+                  border-bottom: 8px solid #ffd400;
+                  border-radius: 8px;
+                  height: 170px;
+                  width: 100%;
+                  background-image: url(/assets/n3.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text pt-4 d-flex">
+                  <small class="text-body-secondary me-auto"
+                    >10 de Abril 2023</small
+                  >
+                  <img src="/assets/seta.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="d-none d-sm-none d-md-none d-lg-none d-xl-block ms-xl-5 ms-d-xxl-8 mt-5"
+      >
+        <div
+          class="d-flex flex-column flex-sm-column flex-md-column flex-lg-row flex-xl-row column-gap-5 card-group"
+        >
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #ffd400;
+                border-radius: 8px;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/n1.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text"></p>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #ffd400;
+                border-radius: 8px;
+                overflow-y: hidden;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/n2.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              style="
+                border-bottom: 8px solid #ffd400;
+                border-radius: 8px;
+                overflow-y: hidden;
+                height: 163px;
+                width: 100%;
+                background-image: url(/assets/n3.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            ></div>
+            <div class="card-body p-xl-3 p-xxl-4">
+              <h5 class="card-title">
+                Lorem Ipsum dolor Sit Amet Dolor lorem ipsum
+              </h5>
+              <p class="card-text pt-4 d-flex">
+                <small class="text-body-secondary me-auto"
+                  >10 de Abril 2023</small
+                >
+                <img src="/assets/seta2.svg" alt="" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

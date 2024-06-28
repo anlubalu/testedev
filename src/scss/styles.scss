@@ -1,0 +1,431 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+// $enable-gradients: true;
+// $enable-shadows: true;
+
+// $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// Include functions first
+// @import "bootstrap/scss/functions";
+
+// Customize some defaults
+// $body-color: #333;
+// $body-bg: #fff;
+// $border-radius: 0.4rem;
+// $success: #7952b3;
+$enable-dark-mode: false;
+$enable-negative-margins: true;
+$spacer: 1rem;
+$spacers: (
+  8: $spacer * 8,
+);
+
+// // Required
+// @import "bootstrap/scss/variables";
+// @import "bootstrap/scss/variables-dark";
+// @import "bootstrap/scss/maps";
+// @import "bootstrap/scss/mixins";
+// @import "bootstrap/scss/utilities";
+// @import "bootstrap/scss/root";
+// @import "bootstrap/scss/reboot";
+
+// @import "bootstrap/scss/type";
+// // @import "bootstrap/scss/images";
+// @import "bootstrap/scss/containers";
+// @import "bootstrap/scss/grid";
+// // @import "bootstrap/scss/tables";
+// // @import "bootstrap/scss/forms";
+// @import "bootstrap/scss/buttons";
+// @import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/dropdown";
+// // @import "bootstrap/scss/button-group";
+// // @import "bootstrap/scss/nav";
+// // @import "bootstrap/scss/navbar"; // Requires nav
+// // @import "bootstrap/scss/card";
+// // @import "bootstrap/scss/breadcrumb";
+// // @import "bootstrap/scss/accordion";
+// // @import "bootstrap/scss/pagination";
+// // @import "bootstrap/scss/badge";
+// // @import "bootstrap/scss/alert";
+// // @import "bootstrap/scss/progress";
+// // @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/close";
+// // @import "bootstrap/scss/toasts";
+// @import "bootstrap/scss/modal"; // Requires transitions
+// // @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// // @import "bootstrap/scss/carousel";
+// // @import "bootstrap/scss/spinners";
+// @import "bootstrap/scss/offcanvas"; // Requires transitions
+// // @import "bootstrap/scss/placeholders";
+
+// // Helpers
+// // @import "bootstrap/scss/helpers";
+
+// // Utilities
+// @import "bootstrap/scss/utilities/api";
+
+// $margin-start: (
+//   responsive: true,
+//   property: margin-left,
+//   class: ms,
+//   values: $spacers,
+// );
+
+// $utilities: map-merge($utilities, ($margin-start));
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "margin-start":
+      map-merge(
+        map-get($utilities, "margin-start"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "margin-start"), "values"),
+              (
+                8: $spacer * 8,
+              )
+            ),
+        )
+      ),
+  )
+);
+
+//
+// Custom styles
+//
+
+@import "icon-list";
+
+.mt-6 {
+  margin-top: ($spacer * 6) !important;
+}
+.ms-d-xxl-8 {
+  @include media-breakpoint-up(xxl) {
+    margin-left: ($spacer * 8) !important;
+  }
+}
+
+.mt-n1 {
+  margin-top: -0.25rem !important;
+}
+
+body {
+  padding: 1.5rem;
+  background-color: transparent;
+}
+
+.video-bg {
+  background-image: url(/assets/video.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 63.6875rem;
+  height: 10109px;
+
+  & h1 {
+    @include media-breakpoint-down(sm) {
+      font-family: Barlow;
+      font-size: 58.55px;
+      font-weight: 250;
+      line-height: 48.97px;
+      text-align: left;
+
+      & span {
+        font-weight: 700;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-family: Barlow;
+      font-size: 95.59px;
+      font-weight: 250;
+      line-height: 79.95px;
+      text-align: left;
+      color: #fff;
+
+      & span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  & h2 {
+    font-family: Barlow;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #fff;
+  }
+
+  & button.saiba-mais {
+    width: 124px;
+    height: 49px;
+    background-color: transparent;
+    border-radius: 50px;
+    text-transform: uppercase;
+    border: 2px solid #ffffff;
+  }
+}
+
+.nav-item {
+  & .nav-link {
+    font-family: Barlow;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: right;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+.destaque {
+  .card {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.72) 100%
+    );
+    min-height: 366px;
+    height: auto;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+
+    & .card-body {
+      & .card-title {
+        font-family: Barlow;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: left;
+        color: #fff;
+      }
+      & .text-body-secondary {
+        font-family: Barlow;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+#destaqueSlide {
+  & .carousel-indicators {
+    bottom: -59px;
+
+    & button.active {
+      width: 20px;
+      height: 8px;
+      border-radius: 30px;
+      border: 1px solid #42b073;
+      background-color: #42b073;
+    }
+    & button {
+      width: 20px;
+      height: 8px;
+      border-radius: 30px;
+      background-color: #fff;
+      border: 1px solid #333;
+    }
+  }
+
+  .card {
+    min-height: 366px;
+    height: auto;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+
+    & .card-body {
+      & .card-title {
+        font-family: Barlow;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.375rem;
+        text-align: left;
+        color: #fff;
+      }
+      & .text-body-secondary {
+        font-family: Barlow;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.375rem;
+        text-align: left;
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+.blog {
+  max-width: 104.875rem;
+  border-radius: 10px;
+
+  &.esportes {
+    border-left: 12px solid #42b073;
+  }
+  &.eventos {
+    border-left: 12px solid #9b836b;
+  }
+  &.servicos {
+    border-left: 12px solid #24beff;
+  }
+  &.proejtos {
+    border-left: 12px solid #ff632d;
+  }
+  &.negocios {
+    border-left: 12px solid #ffd400;
+  }
+
+  & h2 {
+    text-transform: uppercase;
+
+    @include media-breakpoint-down(xl) {
+      font-family: Barlow;
+      font-size: 2.5rem;
+      font-weight: 250;
+      line-height: 2.5rem;
+      letter-spacing: -0.08em;
+      text-align: center;
+      color: #333333;
+    }
+    @include media-breakpoint-up(xl) {
+      font-family: Barlow;
+      font-size: 5.9744rem;
+      font-weight: 250;
+      line-height: 4.9969rem;
+      text-align: left;
+      color: #333333;
+    }
+  }
+
+  & p.info {
+    font-family: Barlow;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2rem;
+    text-align: left;
+    color: #333333;
+  }
+
+  & button.saiba-mais {
+    width: 124px;
+    height: 49px;
+    background-color: transparent;
+    border-radius: 50px;
+    text-transform: uppercase;
+    border: 2px solid #333333;
+    color: #333333;
+  }
+
+  & .card-group {
+    & .card {
+      background-color: transparent;
+      min-height: 325px;
+
+      & .card-body {
+        & .card-title {
+          font-family: Barlow;
+          font-size: 1.125rem;
+          font-weight: 700;
+          line-height: 1.375rem;
+          text-align: left;
+          color: #333333;
+        }
+        & .text-body-secondary {
+          font-family: Barlow;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.375rem;
+          text-align: left;
+          color: #333333 !important;
+        }
+      }
+    }
+  }
+}
+
+#esportesSlide,
+#eventosSlide,
+#servicosSlide,
+#projetosSlide,
+#negociosSlide {
+  & .carousel-indicators {
+    bottom: 50px;
+
+    & button.active {
+      width: 20px;
+      height: 8px;
+      border-radius: 30px;
+      border: 1px solid #42b073;
+      background-color: #42b073;
+    }
+    & button {
+      width: 20px;
+      height: 8px;
+      border-radius: 30px;
+      background-color: #fff;
+      border: 1px solid #333;
+    }
+  }
+
+  & .carousel-item {
+    min-height: 490px;
+    max-height: 490px;
+  }
+
+  & .card {
+    background-color: transparent;
+    min-height: 325px;
+
+    & .card-body {
+      & .card-title {
+        font-family: Barlow;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.375rem;
+        text-align: left;
+        color: #333333;
+      }
+      & .text-body-secondary {
+        font-family: Barlow;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.375rem;
+        text-align: left;
+        color: #333333 !important;
+      }
+    }
+  }
+}
